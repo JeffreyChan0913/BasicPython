@@ -106,6 +106,7 @@ print(fs, 'no duplicate')
 # add to set in the front
 fs.add('unix')
 print(fs)
+
 # insert
 
 # remove something
@@ -179,7 +180,7 @@ print(pp[1]['name'])
 # function
 # create a function
 def display():
-    print('fuck yeah')
+    print('oh yeah')
 
 
 display()
@@ -254,7 +255,7 @@ if age > 18:
 elif age >= 16:
     print('come and and have fun without beer')
 else:
-    print('get the fuck off')
+    print('please leave')
 
 # short cut for if else condition
 c = 90
@@ -272,7 +273,7 @@ if age >= 16:
     else:
         print('come and and have fun without beer')
 else:
-    print('get the fuck off')
+    print('please leave')
 
 # pass means do nothing
 k = 100
@@ -304,7 +305,7 @@ while j < 6:
     print(j)
     j += 1
 else:
-    print('fuck yeah im done looping')
+    print('oh yeah im done looping')
 
 # for loop
 print(f)
