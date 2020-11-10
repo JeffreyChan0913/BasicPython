@@ -1,0 +1,407 @@
+name = "jeffrey"
+y = "29"
+# printing format
+# by position
+# print(" some string {}, ... {}".format(variable_name_for_the_first_{}, variable_name_for_the_second_{}))
+print("my name is {}, and im {} year old".format(name, y))
+# with F-string( python 3.6+)
+# print(f" some string {variable} ... {variable}")
+print(f"Hello, my name is {name}, and i am {y} year old")
+# string methods
+s = "hello world"
+print(s)
+# convert to upper case
+print(s.upper())
+# get the length. works for list, vector, dict.
+print(len(s))
+# accessing the second element. n-1 is the positioning of the element
+print(s[1])
+# s.replace(from, to)
+print(s.replace("hello", "programming"))
+# count("something") is to count how many something in a variable
+print(s.count("l"))
+# object.startswith("") or object.endswith("") return true or false
+print(s.startswith("h"))
+print(s.endswith("d"))
+# Split into a list, referring to s = hello world. the split by space so "hello", "world" is 2 letter in a list
+print(s.split())
+s = "hello world"
+# find position, if there are duplicated char, it will return the first element that matches your desire char
+print(s.find("o"))
+
+# ------------------------------------------------------------------------------------------
+
+# List, in R it will be vector, in C++ it will be array
+# list creation
+num = [1, 2, 3, 4, 5]
+# use a constructor
+num2 = list((1, 2, 3, 4, 5))
+
+# num and num2 list creation is the same
+print(num, num2)
+
+fruits = ['apple', 'orange', 'grapes', 'pears']
+print(fruits)
+# get the len
+print(len(fruits))
+# print orange n-1
+print(fruits[1])
+# add object
+fruits.append('banana')
+print(fruits)
+# remove object
+fruits.remove('grapes')
+print(fruits)
+# insert object.insert(position, object)
+fruits.insert(2, 'figs')
+print(fruits)
+# remove by position object.pop(position)
+fruits.pop(2)
+print(fruits)
+# sort(object)
+print(sorted(fruits))
+# reverse a list object.reverse()
+fruits.reverse()
+print(fruits)
+# reverse sort
+fruits.sort(reverse=True)
+print(fruits)
+# change value
+fruits[0] = 'hehe'
+print(fruits)
+
+# -----------------------------------------------------------------------------------------------
+
+# tuple is a vector but it is ordered. IMPORTANT unchangeable
+# key tuple use (), vector use []
+f = ('apple', 'orange', 'grapes', 'abc')
+f2 = ('kkkkk')
+print(f, f2)
+print(f2, type(f2))
+# if we put , behind 'kkkkk',
+f3 = ('kkkkk',)
+print(f3, type(f3))
+# access a value
+print(f[2])
+# as we state, tuple is unchangeable let see now
+# f[0] = 'hii'
+# print(f)
+# as you see, we get error and actually the ide realize the error as well.
+# remove a tuple
+# del f3
+# print(f3)
+# from the log we have f3 can be undefined
+
+# set is a collection which is unordered and un-indexed. no duplicated member
+# set is defined as {}. tuple (), and list[]
+fs = {'mac', 'window', 'linux'}
+# check something in a set
+print('mac' in fs)
+print(fs, type(fs))
+
+# add duplicated
+fs.add('mac')
+print(fs, 'no duplicate')
+
+# add to set in the front
+fs.add('unix')
+print(fs)
+# insert
+
+# remove something
+fs.remove('unix')
+print(fs)
+
+# clear the set, it just removes all the element in the set
+fs.clear()
+print(fs)
+
+# del will remove then object
+del fs
+# print(fs)
+# now i have a log of fs is undefined
+
+# ----------------------------
+# Dictionary is a collection which is unordered, changeable and indexed. NO DUPLICATED elements
+# create dict keys : values
+person = {
+    'first_name': 'Jeff',
+    'last_name': 'C',
+    'age': 30
+}
+p2 = {
+    'first_name': 'kkk',
+    'last_name': 'aaa',
+    'age': 10
+}
+print(person, type(person))
+# just get the first name
+print(person['first_name'])
+print(person.get('last_name'))
+# add something too dict
+person['num'] = '626'
+print(person)
+# just get the key
+print(person.keys())
+# get the pair
+print(person.items())
+# copy dict and save it as p2
+#p2 = person.copy()
+# add the key and value
+p2['city'] = 'CA'
+#print(p2)
+# i can copy and assign an object instantly
+p3 = p2.copy()
+p3['sex'] = 'M'
+print(p3)
+# remove item
+del (p3['sex'])
+print(p3)
+# remove item with pop
+p3.pop('city')
+print(p3)
+# clear, it will remove all the empty the dict
+p3.clear()
+print(p3)
+# get length
+print(len(person))
+# list of dict
+pp = [
+    {'name': 'm', 'age': 30},
+    {'name': 'kk', 'age': 25}
+]
+print(pp)
+# print second dict with the key of name
+print(pp[1]['name'])
+
+
+# ------------------------------------
+# function
+# create a function
+def display():
+    print('fuck yeah')
+
+
+display()
+# passing object thru function
+
+
+def pName(name):
+    print(f'Hi {name}')
+
+
+name = 'jeffrey'
+pName(name)
+# we can also set a default value for the name if the function being called without a name
+
+
+def sayHello(showname='on9'):
+    print(f'Hi {showname}')
+
+
+print(sayHello())
+
+# return value
+def getSum(num1, num2):
+    return num1+num2
+
+
+print(getSum(1, 2))
+
+# lambda function is a small anonymous function
+# it can take any number of arguments, but can only have one expression
+getSum = lambda num1, num2: num1+num2
+print(getSum(10, 1))
+
+# ------------------------------------------
+# conditional statement
+# if else if and so on
+# ( ==, !=, >, <, >=, <=) those are the operation to do comparison
+x = 10
+y = 5
+print(x == y)
+print(x != y)
+print(x > y)
+print(x < y)
+print(x <= y)
+print(x >= y)
+a, b = 5, 4
+if a > b:
+    print('a is greater and b')
+if a >= b:
+    print('a is greater than or equals to b')
+if a <= b:
+    print('a is greater than or equals to b')
+else:
+    print('a is not smaller than or equals to b')
+
+# logical operators (and, or, not) used to combine conditional statement
+print('is', (x < 5 and x > 6))
+print('is', (x > 8 or x < 5))
+# not means is x not less than 5 and also is x not less than 8? since x = 10 and it is greater than 8
+# so it returns true
+print('is', not( x < 5 and x < 8))
+
+# membership operators (not, not in) to see if something in side a data structures
+ff = ['apple', 'orange']
+print('apple' in ff)
+print('mac' not in ff)
+print('orange' not in ff)
+
+age = 10
+if age > 18:
+    print('come in and have a drink')
+elif age >= 16:
+    print('come and and have fun without beer')
+else:
+    print('get the fuck off')
+
+# short cut for if else condition
+c = 90
+d = 70
+print('above average') if c > d else print('below average')
+
+# 3 conditions
+print('above average') if 60 > d else print('lowest in the class') if 60 < 50 else print('below average')
+
+# nested if else statement
+age = 16
+if age >= 16:
+    if age > 18:
+        print('come in and have a drink')
+    else:
+        print('come and and have fun without beer')
+else:
+    print('get the fuck off')
+
+# pass means do nothing
+k = 100
+if k > 60:
+    pass
+
+# --------------------------------
+# loop
+# set i = 1, while i is less than 6 print(i), if i == 3 exit the loop. important, i += 1
+# without the increment counter, the loop will go forever.
+i = 1
+while i < 6:
+    print(i)
+    if i == 3:
+        break
+    i += 1
+# continue statement, simply skip that 3
+m = 1
+while m < 6:
+    m += 1
+    if i == 3:
+        continue
+    print(m)
+
+# while loop is always true until the require has met
+# there fore here is what we have
+j = 1
+while j < 6:
+    print(j)
+    j += 1
+else:
+    print('fuck yeah im done looping')
+
+# for loop
+print(f)
+for x in f:
+    print(x)
+
+# loop thru string
+for x in f[3]:
+    print(x)
+
+# break statement in for loop
+o = 0
+for x in f:
+    o = o + 1
+    print(f'{x}, number of element {o}\n')
+    if x == 'orange':
+        break
+
+# break statment but before print
+z = 0
+for x in f:
+    z = z + 1
+    if x == 'orange':
+        break
+    print(f'{x}, number of element {z}\n')
+
+# continue will skip that element
+l = 0
+for x in f:
+    l = l + 1
+    if x == 'orange':
+        continue
+    print(f'{x}, number of element {z}\n')
+
+# range function
+for x in range(6):
+    print(x)
+# with condition
+for x in range(2, 6):
+    print(x)
+# range with sequence with 3 (start, end at n - increment, increment)
+for x in range(2, 10, 2):
+    print(x)
+# for loop body always true until the loop is done
+for x in range(6):
+    print(x)
+else:
+    print('im done')
+
+# nested for loop
+adj = ["red", "big", "tasty"]
+fff = ["apple", "banana", "cherry"]
+
+for x in adj:
+  for y in fff:
+    print(x, y)
+
+# pass can also avoid getting error as well
+for x in [0, 1, 2]:
+    pass
+
+
+# class
+class Peter:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+
+p1 = Peter("jj", 30)
+print(p1.name, p1.age)
+
+
+# we can define method in an object as well, self is referring to the object itself
+# you can change self to abc but you need to change the code as follow
+# def __init__(abc, name, age):
+#       abc.name = name
+#       abc.age = age
+class Peter:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def myfunc(self):
+        print('hi my name is ' + self.name)
+
+
+p1 = Peter("jj", 30)
+print(p1.name, p1.age)
+p1.myfunc()
+# lets change the age to 40
+p1.age = 40
+print(p1.age)
+
+# i can also use del to remove the property
+del p1.age
+#print(p1.age)
+# i can also del the object
+del p1
+#print(p1.name)
