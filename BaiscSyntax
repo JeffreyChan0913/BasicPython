@@ -1,3 +1,5 @@
+# quick note, some print function are commented out because it will generate error, but you are suppose to see those error, so when you see the #print(...),
+# please remove the # and read the error
 name = "jeffrey"
 y = "29"
 # printing format
